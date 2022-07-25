@@ -31,7 +31,7 @@ gp_sample <- function(x_train, resid, x_test,
 # Sample tau
 sample_tau <- function(y,predict_matrix,a_tau, d_tau){
 
-  stats::rgamma(n = 1,shape = 0.5*length(y) + a_tau, rate = crossprod((y-colSums(predict_matrix))))
+  stats::rgamma(n = 1,shape = 0.5*length(y) + a_tau, rate = 0.5*crossprod((y-colSums(predict_matrix))))
 
 }
 

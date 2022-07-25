@@ -1,8 +1,8 @@
 rm(list=ls())
 # Creating the dataset
-n_train <- n_test <- 500
+n_train <- n_test <- 100
 sd_val <- 0.1
-n_gp <- 1
+n_gp <- 10
 x_train <- matrix(seq(-pi,pi,length.out = n_train))
 y <- sin(x_train) + rnorm(n = n_train,sd = sd_val)
 y_max <- max(y)
